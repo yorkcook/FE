@@ -31,3 +31,16 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 30%;
+  margin: 2%;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
