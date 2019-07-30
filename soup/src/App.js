@@ -1,5 +1,6 @@
 import React from "react";
 import IngredientsList from './components/IngredientsList.js';
+import { Route } from 'react-router-dom';
 
 import { Route } from "react-router-dom";
 
@@ -16,16 +17,16 @@ function App() {
   return (
 
 
+
     <Router>
       <div className="App">
         <h1>I'll Serve Soup!</h1>
         <Login />
         <Route exact path="/registration" component={Registration} />
-      <IngredientsList />
+        <Route path="/" component={IngredientsList} />
         {/* <PrivateRoute exact path="/inventory" component={Inventory} /> */}
       </div>
     </Router>
-
 
   );
 }

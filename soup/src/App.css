@@ -34,10 +34,13 @@
 
 
 .card {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
   border-radius: 15px;
   width: 30%;
   margin: 2%;
+  box-shadow: 5px 10px 8px black;
 }
 
 .page {
@@ -45,6 +48,78 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
+.name {
+
+
+}
+
+.quantity {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.unit {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.price {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.category {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.kitchen {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  border: 1px solid transparent;
+  border-radius: 0 0 15px 15px;
+  color: grey;
+}
+
+.Q-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.U-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.P-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.C-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.K-title {
+  margin: 0 1% 0 0;
+  color: black;
 
 button {
   max-width: 150px;
@@ -92,5 +167,6 @@ label {
   border: 3px solid black;
   width: 30%;
   margin-left: 550px;
+
 
 }
