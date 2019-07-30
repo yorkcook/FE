@@ -203,8 +203,9 @@ label {
   text-decoration: none;
   /* padding: 0 .3rem 0 .6rem; */
   padding: 0;
-  margin: 0 .3rem 0 .6rem;
+  margin: 0 1rem 0 .5rem;
   font-size: 1.4rem;
+  font-weight: bold;
   /* border: 1px solid grey; */
   /* width: 100px;
   height: 100px; */
@@ -213,5 +214,5 @@ label {
 .logo{
   height: 6rem;
   width: 6rem;
-  margin-right: 3rem;
+  margin-right: 5rem;
 }
