@@ -1,9 +1,7 @@
 import React from "react";
 import IngredientsList from './components/IngredientsList.js';
 import { Route } from 'react-router-dom';
-
-import { Route } from "react-router-dom";
-
+import AddItemForm from './components/AddItemForm.js';
 import Registration from "./components-york/Registration";
 import PrivateRoute from "./components-york/PrivateRoute";
 
@@ -21,9 +19,10 @@ function App() {
     <Router>
       <div className="App">
         <h1>I'll Serve Soup!</h1>
-        <Login />
+        <Route exact path="/" component={Login} />
         <Route exact path="/registration" component={Registration} />
-        <Route path="/" component={IngredientsList} />
+        <Route exact path="/inventory" component={IngredientsList} />
+        <Route exact path="/add-item" component={AddItemForm} />
         {/* <PrivateRoute exact path="/inventory" component={Inventory} /> */}
       </div>
     </Router>
