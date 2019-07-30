@@ -11,6 +11,7 @@ import "./App.css";
 
 function App() {
   return (
+
     <Router>
       <div className="App">
         <h1>I'll Serve Soup!</h1>
@@ -18,6 +19,7 @@ function App() {
         {/* <PrivateRoute exact path="/inventory" component={Inventory} /> */}
       </div>
     </Router>
+
   );
 }
 
