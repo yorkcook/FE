@@ -10,6 +10,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import "./App.css";
 
+import Login from './components/Login/Login'
+
 function App() {
   return (
 
@@ -17,6 +19,7 @@ function App() {
     <Router>
       <div className="App">
         <h1>I'll Serve Soup!</h1>
+        <Login />
         <Route exact path="/registration" component={Registration} />
       <IngredientsList />
         {/* <PrivateRoute exact path="/inventory" component={Inventory} /> */}
