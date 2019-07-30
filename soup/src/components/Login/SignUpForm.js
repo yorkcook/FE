@@ -17,15 +17,14 @@ export default function SignupForm(){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <fieldset>
-                <legend>Sign In</legend>
+        <form onSubmit={handleSubmit} className='box'>          
+                <legend className='registration-title'>Sign In</legend>
                 <div className='signInForm'>
-                    <label>Username: </label>
-                    <div>
+                    <label>UserName </label>
+                    <div className='test'>
                     <input
                         type='text'
-                        className='formControl'
+                        className='#'
                         name='username'
                         placeholder='Enter your username'
                         value={user.username}
@@ -33,19 +32,21 @@ export default function SignupForm(){
                         />
                     </div>
                     <div>
-                    <label>Password: </label>
-                    <input
-                        type='password'
-                        className='formControl'
-                        name='password'
-                        placeholder='Enter your password'                        
-                        onChange={handleChange}
-                        value={user.password}
-                        />
+                    <label>Password </label>
+                        <div className='test'>
+                            <input
+                                type='password'
+                                className='#'
+                                name='password'
+                                placeholder='Enter your password'                        
+                                onChange={handleChange}
+                                value={user.password}
+                                />
+                        </div>
                     </div>
                 </div>
-                <button type='submit'>Submit</button>
-            </fieldset>
+                <button type='submit'>Log In</button>
+         
         </form>
     )
 }
