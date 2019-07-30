@@ -8,7 +8,7 @@ const SingleIngredient = (props) => {
   useEffect(() => {
       const id = props.match.params.id;
 
-      axios("")
+      axios(`https://server-soup.herokuapp.com/api/inventory/${id}`)
         .get(res => {
           setIngredient(res)
         })
@@ -16,7 +16,9 @@ const SingleIngredient = (props) => {
   }, [props.match.params.id])
 
 return (
-  
+  <IngredientsCard card={ingredient} />
 )
 
 }
+
+export default SingleIngredient;
