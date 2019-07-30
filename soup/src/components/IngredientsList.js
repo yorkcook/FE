@@ -4,20 +4,19 @@ import IngredientsCard from './IngredientsCard.js';
 import axios from 'axios';
 
 const IngredientsList = (props) => {
-  const [ingredient, setIngredient] = useState(data);
+const [ingredient, setIngredient] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("")
-  //     .then(res => {
-  //       setIngredient(res);
-  //     })
-  //     .catch(err => console.log(err))
-  // })
+useEffect(() => {
+  axios
+    .get("https://05386425-fdd8-4080-a90a-ba001245303b.mock.pstmn.io/api/inventory")
+    .then(res => {console.log(res.data)
+    setIngredient(res.data)})
+    .catch(err => console.log(err))
+}, [])
 
   return (
     <div>
-      <IngredientsCard card={ingredient} />
+      <IngredientsCard card={ingredient}/>
     </div>
   )
 }
