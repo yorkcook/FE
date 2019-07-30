@@ -9,25 +9,23 @@ import "../App.css";
 
 const Registration = ({ touched, errors }) => {
   return (
-    <div>
-      <div className="box">
-        <h1 className="registration-title">Registration Form</h1>
-        <Form>
-          <label>UserName</label>
-          <Field type="text" name="username" />
-          <p>{touched.username && errors.username}</p>
-          <label>Email</label>
-          <Field type="text" name="email" />
-          <p>{touched.email && errors.email}</p>
-          <label>Password</label>
-          <Field type="text" name="password" />
-          <p>{touched.password && errors.password}</p>
-          <label>Soup Kitchen</label>
-          <Field type="text" name="kit_id" />
-          <p>{touched.kit_id && errors.kit_id}</p>
-          <button type="submit">Sign Up</button>
-        </Form>
-      </div>
+    <div className="box">
+      <h1 className="registration-title">Registration Form</h1>
+      <Form>
+        <label>UserName</label>
+        <Field type="text" name="username" />
+        <p>{touched.username && errors.username}</p>
+        <label>Email</label>
+        <Field type="text" name="email" />
+        <p>{touched.email && errors.email}</p>
+        <label>Password</label>
+        <Field type="text" name="password" />
+        <p>{touched.password && errors.password}</p>
+        <label>Soup Kitchen</label>
+        <Field type="text" name="kit_id" />
+        <p>{touched.kit_id && errors.kit_id}</p>
+        <button type="submit">Sign Up</button>
+      </Form>
     </div>
   );
 };
