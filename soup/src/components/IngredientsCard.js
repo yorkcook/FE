@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const IngredientsCard = (props) => {
+  
+
   return (
     <div>
     <div className="page">{props.card.map(item => {
@@ -12,10 +14,14 @@ const IngredientsCard = (props) => {
         <h4 className="price"><p className="P-title"><strong>Price: </strong></p>{item.price} cents</h4>
         <h4 className="category"><p className="C-title"><strong>Category: </strong></p>{item.category}</h4>
         <h4 className="kitchen"><p className="K-title"><strong>Kitchen: </strong></p>{item.kitchen}</h4>
+        <div onClick={props.plus} className="countButtons">+</div>
+        <div onClick={props.minus} className="countButtons">-</div>
       </div>
       )
     })}
+
     </div>
+
     </div>
   );
 }
