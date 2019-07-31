@@ -22,7 +22,7 @@ function App() {
         <NavBar />
         <Route exact path="/login" component={Login} />
         <Route exact path="/registration" component={Registration} />
-        <Route exact path="/" component={IngredientsList} />
+        <Route exact path="/ingredients" component={IngredientsList} />
         {/* <PrivateRoute exact path="/inventory" component={Inventory} /> */}
       </div>
     </Router>

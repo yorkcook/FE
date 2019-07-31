@@ -74,7 +74,7 @@ export default withFormik({
       .then(res => {
         console.log("in handleSubmit", res);
         localStorage.setItem("token", res.data.token);
-        props.history.push("/inventory");
+        props.history.push("/ingredients");
       })
       .catch(e => {
         console.log("Registration Failed!", e);
