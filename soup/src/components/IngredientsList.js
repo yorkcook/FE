@@ -8,7 +8,7 @@ const [ingredient, setIngredient] = useState([]);
 
 useEffect(() => {
   axios
-    .get("https://05386425-fdd8-4080-a90a-ba001245303b.mock.pstmn.io/api/inventory")
+    .get("https://server-soup.herokuapp.com/api/inventory")
     .then(res => {console.log(res.data)
     setIngredient(res.data)})
     .catch(err => console.log(err))
