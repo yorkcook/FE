@@ -7,7 +7,7 @@ import axios from "axios";
 
 import "../App.css";
 
-const Registration = ({ touched, errors }) => {
+const Registration = ({ touched, errors, values, handleChange }) => {
   return (
     <div className="box">
       <h1 className="registration-title">Registration Form</h1>
@@ -44,9 +44,9 @@ const Registration = ({ touched, errors }) => {
         <div>
           <label>Soup Kitchen</label>
           <div className="test">
-            <select name="kit_id">
-              <option value="">Select Option</option>
-              <option value="1">1</option>
+            <select name="kit_id" value={values.color} onChange={handleChange}>
+              <option value="" label="Select a color" />
+              <option value="1">St. Antony's</option>
               <option value="2">GLIDE</option>
               <option value="3">Mother Brown's Kitchen</option>
               <option value="4">Martin de Porres House of Hospitality</option>
