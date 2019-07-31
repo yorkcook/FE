@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const AddItemForm = () => {
-  const [newIngredient, setNewIngredient] = useState({name: "", quantity: "", unit: "", price: "",
-category: "", kitchen: ""});
+  const [newIngredient, setNewIngredient] = useState({item_name: "",
+    quantity: "",
+    price: "",
+    alert_when: "",
+    kit_id: 1,
+    unit_id: "",
+    cat_id: "",
+    user_id: "" });
 
 
 function changeHandler(event){
@@ -12,13 +18,21 @@ function changeHandler(event){
 
 
 
-function submitHandler(){
+function submitHandler(e){
+    e.preventDefault();
+  console.log("new ingredient", {...newIngredient, quantity: Number(newIngredient.quantity),
+    price: Number(newIngredient.price), alert_when: Number(newIngredient.alert_when),
+    unit_id: Number(newIngredient.unit_id), cat_id: Number(newIngredient.cat_id), user_id: Number(newIngredient.user_id),
+  kit_id: Number(newIngredient.kit_id)})
 
 // useEffect(() => {
     axios
-      .post("https://server-soup.herokuapp.com/api/inventory", newIngredient)
+      .post("https://server-soup.herokuapp.com/api/inventory", {...newIngredient, quantity: Number(newIngredient.quantity),
+        price: Number(newIngredient.price), alert_when: Number(newIngredient.alert_when),
+        unit_id: Number(newIngredient.unit_id), cat_id: Number(newIngredient.cat_id), user_id: Number(newIngredient.user_id),
+      kit_id: Number(newIngredient.kit_id)})
       // .post("https://05386425-fdd8-4080-a90a-ba001245303b.mock.pstmn.io/api/inventory", newIngredient)
-      .then(res => setNewIngredient(res))
+      .then(res => {console.log("response", res.data); setNewIngredient(res.data)})
       .catch(err => console.log(err))
       // }, [])
 }
@@ -31,7 +45,7 @@ function submitHandler(){
         Name:
         <input
         type="text"
-        name="name"
+        name="item_name"
         value={newIngredient.item_name}
         onChange={changeHandler}
         />
@@ -47,20 +61,21 @@ function submitHandler(){
           </label>
             <label>
               Unit:
-          <select name="units">
-              <option value="pounds">Pounds</option>
-              <option value="ounces">Ounces</option>
-              <option value="packages">Packages</option>
-              <option value="cans">Cans</option>
-              <option value="cups">Cups</option>
-              <option value="pints">Pints</option>
-              <option value="gallons">Gallons</option>
-              <option value="quarts">Quarts</option>
-              <option value="bags">Bags</option>
-              <option value="jars">Jars</option>
-              <option value="bunches">Bunches</option>
-              <option value="grams">Grams</option>
-              <option value="boxes">Boxes</option>
+          <select name={newIngredient.unit_id}>
+              <option>Select Option</option>
+              <option value="1">Pounds</option>
+              <option value="2">Ounces</option>
+              <option value="3">Packages</option>
+              <option value="4">Cans</option>
+              <option value="5">Cups</option>
+              <option value="6">Pints</option>
+              <option value="7">Gallons</option>
+              <option value="8">Quarts</option>
+              <option value="9">Bags</option>
+              <option value="10">Jars</option>
+              <option value="11">Bunches</option>
+              <option value="12">Grams</option>
+              <option value="13">Boxes</option>
             </select>
             </label>
               <label>
@@ -72,29 +87,30 @@ function submitHandler(){
                 onChange={changeHandler}
                 />
               </label>
+              <label>
+                Alert when:
+                <input
+                type="text"
+                name="alert_when"
+                value={newIngredient.alert_when}
+                onChange={changeHandler}
+                />
+              </label>
                 <label>
                   Category:
-                  <select name="categories">
-                      <option value="produce">Produce</option>
-                      <option value="dairy">Dairy</option>
-                      <option value="meat&poultry">Meat & Poultry</option>
-                      <option value="herbs&spices">Herbs & Spices</option>
-                      <option value="frozen">Frozen</option>
-                      <option value="beverage">Beverage</option>
-                      <option value="dry">Dry</option>
-                      <option value="canned&jarred">Canned & Jarred</option>
-                      <option value="other">Other</option>
+                  <select name={newIngredient.cat_id}>
+                      <option>Select Option</option>
+                      <option value="1">Produce</option>
+                      <option value="2">Dairy</option>
+                      <option value="3">Meat & Poultry</option>
+                      <option value="4">Herbs & Spices</option>
+                      <option value="5">Frozen</option>
+                      <option value="6">Beverage</option>
+                      <option value="7">Dry</option>
+                      <option value="8">Canned & Jarred</option>
+                      <option value="9">Other</option>
                     </select>
                 </label>
-                  <label>
-                    Kitchen:
-                    <input
-                    type="text"
-                    name="kitchen"
-                    value={newIngredient.kit_name}
-                    onChange={changeHandler}
-                    />
-                  </label>
                   <button type="submit">Submit</button>
     </form>
   )
