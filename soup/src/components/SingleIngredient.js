@@ -3,13 +3,13 @@ import axios from 'axios';
 import IngredientsCard from './IngredientsCard.js';
 
 const SingleIngredient = (props) => {
-  const [ingredient, setIngredient] = useState();
+  const [ingredient, setIngredient] = useState([]);
 
   useEffect(() => {
       const id = props.match.params.id;
 
       axios(`https://server-soup.herokuapp.com/api/inventory/${id}`)
-        .get(res => {
+        .get(res => { console.log(res)
           setIngredient(res)
         })
         .catch(err => console.log(err))
