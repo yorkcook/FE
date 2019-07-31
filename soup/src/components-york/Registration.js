@@ -1,13 +1,13 @@
 import React from "react";
 
-import { withFormik, Form, Field, ErrorMessage } from "formik";
+import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 
 import axios from "axios";
 
 import "../App.css";
 
-const Registration = ({ touched, errors, values, handleChange }) => {
+const Registration = ({ touched, errors }) => {
   return (
     <div className="box">
       <h1 className="registration-title">Registration Form</h1>
@@ -44,7 +44,15 @@ const Registration = ({ touched, errors, values, handleChange }) => {
         <div>
           <label>Soup Kitchen</label>
           <div className="test">
-            <Field type="text" name="kit_id" placeholder="Enter your Id" />
+            <select name="kit_id">
+              <option value="">Select Option</option>
+              <option value="1">1</option>
+              <option value="2">GLIDE</option>
+              <option value="3">Mother Brown's Kitchen</option>
+              <option value="4">Martin de Porres House of Hospitality</option>
+              <option value="5">Curry Senior Center</option>
+              <option value="6">Rescue Mission</option>
+            </select>
             <p>{touched.kit_id && errors.kit_id}</p>
           </div>
         </div>
@@ -70,8 +78,8 @@ export default withFormik({
     email: Yup.string().required("Email is required"),
     password: Yup.string()
       .min(4, "Password must be at least 4 characters long.")
-      .required("Password is required"),
-    kit_id: Yup.string().required("Kitchen identity is required")
+      .required("Password is required")
+    // kit_id: Yup.string().required("Kitchen identity is required")
   }),
   handleSubmit(values, { props }) {
     const url = "https://server-soup.herokuapp.com/api/auth/register";
