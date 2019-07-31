@@ -12,27 +12,41 @@ const Registration = ({ touched, errors, values, handleChange }) => {
     <div className="box">
       <h1 className="registration-title">Registration Form</h1>
       <Form>
-        <label>UserName</label>
-        <Field type="text" name="username" />
-        <p className="yup">{touched.username && errors.username}</p>
-        <label>Email</label>
-        <Field type="text" name="email" />
-        <p className="yup">{touched.email && errors.email}</p>
-        <label>Password</label>
-        <Field type="text" name="password" />
-        <p className="yup">{touched.password && errors.password}</p>
-        <label>Soup Kitchen</label>
         <div>
-          <select name="kit_id" value={values.kit_id} onChange={handleChange}>
-            <option value="" label="Select a kitchen" />
-            <option value="1" label="1" />
-            <option value="2" label="2" />
-            <option value="3" label="3" />
-            <option value="4" label="4" />
-            <option value="5" label="5" />
-            <option value="6" label="6" />
-          </select>
-          <p className="yup">{touched.kit_id && errors.kit_id}</p>
+          <label>UserName</label>
+          <div className="test">
+            <Field
+              type="text"
+              name="username"
+              placeholder="Enter your username"
+            />
+            <p>{touched.username && errors.username}</p>
+          </div>
+        </div>
+        <div>
+          <label>Email</label>
+          <div className="test">
+            <Field type="email" name="email" placeholder="Enter your email" />
+            <p>{touched.email && errors.email}</p>
+          </div>
+        </div>
+        <div>
+          <label>Password</label>
+          <div className="test">
+            <Field
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+            <p>{touched.password && errors.password}</p>
+          </div>
+        </div>
+        <div>
+          <label>Soup Kitchen</label>
+          <div className="test">
+            <Field type="text" name="kit_id" placeholder="Enter your Id" />
+            <p>{touched.kit_id && errors.kit_id}</p>
+          </div>
         </div>
         <button type="submit">Sign Up</button>
       </Form>

@@ -19,7 +19,7 @@ function App() {
     <Router>
       <div className="App">
         <h1>I'll Serve Soup!</h1>
-        {/* <Login /> */}
+        <Route exact path="/login" component={Login} />
         <Route exact path="/registration" component={Registration} />
         <Route exact path="/ingredients" component={IngredientsList} />
         {/* <PrivateRoute exact path="/inventory" component={Inventory} /> */}
