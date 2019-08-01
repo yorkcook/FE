@@ -56,7 +56,7 @@ export default withFormik({
       .then(res => {
         console.log("in handleSubmit", res);
         localStorage.setItem("token", res.data.token);
-        props.history.push("/ingredients");
+        props.history.push("/inventory");
       })
       .catch(e => {
         console.log("Login Failed!", e);
@@ -73,7 +73,7 @@ export default withFormik({
 //     // const [logins, setLogins] = useState()
 
 //     // //useEffect for future axios call
-//     // useEffect(()=>{ 
+//     // useEffect(()=>{
 //     // //'grabs api data'
 //     // axios.get('apihere')
 //     //  //if data exsists return response data
@@ -93,4 +93,3 @@ export default withFormik({
 // }
 
 // export default Login
-
