@@ -83,7 +83,7 @@ export default withFormik({
       .then(res => {
         console.log("in handleSubmit", res);
         localStorage.setItem("token", res.data.token);
-        props.history.push("/ingredients");
+        props.history.push("/inventory");
       })
       .catch(e => {
         console.log("Registration Failed!", e);

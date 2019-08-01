@@ -41,28 +41,38 @@ function submitHandler(e){
 
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className='box' onSubmit={submitHandler}>
+      <div>
       <label>
         Name:
-        <input
-        type="text"
-        name="item_name"
-        value={newIngredient.item_name}
-        onChange={changeHandler}
-        />
-      </label>
-        <label>
-          Quantity:
+        <div>
           <input
           type="text"
-          name="quantity"
-          value={newIngredient.quantity}
+          name="item_name"
+          value={newIngredient.item_name}
           onChange={changeHandler}
           />
+        </div>
+      </label>
+      </div>
+      <div>
+        <label>
+          Quantity:
+          <div>
+            <input
+            type="text"
+            name="quantity"
+            value={newIngredient.quantity}
+            onChange={changeHandler}
+            />
+          </div>
           </label>
-            <label>
-              Unit:
-          <select name="unit_id" onChange={changeHandler}>
+          </div>
+        <div>
+          <label>
+            Unit:
+            <div>
+              <select name="unit_id" onChange={changeHandler}>
               <option >Select Option</option>
               <option value="1" >Pounds</option>
               <option value="2">Ounces</option>
@@ -78,28 +88,37 @@ function submitHandler(e){
               <option value="12">Grams</option>
               <option value="13">Boxes</option>
             </select>
-            </label>
-              <label>
-                Price:
+          </div>
+          </label>
+          </div>
+          <div>
+            <label>
+              Price:
+              <div>
                 <input
                 type="text"
                 name="price"
                 value={newIngredient.price}
                 onChange={changeHandler}
                 />
+              </div>
               </label>
+              </div>
               <label>
                 Alert when:
-                <input
-                type="text"
-                name="alert_when"
-                value={newIngredient.alert_when}
-                onChange={changeHandler}
-                />
+                <div>
+                  <input
+                  type="text"
+                  name="alert_when"
+                  value={newIngredient.alert_when}
+                  onChange={changeHandler}
+                  />
+                </div>
               </label>
                 <label>
                   Category:
-                  <select name="cat_id" onChange={changeHandler}>
+                  <div>
+                    <select name="cat_id" onChange={changeHandler}>
                       <option>Select Option</option>
                       <option value="1">Produce</option>
                       <option value="2">Dairy</option>
@@ -110,9 +129,10 @@ function submitHandler(e){
                       <option value="7">Dry</option>
                       <option value="8">Canned & Jarred</option>
                       <option value="9">Other</option>
-                    </select>
+                      </select>
+                    </div>
                 </label>
-                  <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
     </form>
   )
 }
