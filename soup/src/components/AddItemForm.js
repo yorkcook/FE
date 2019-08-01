@@ -9,7 +9,7 @@ const AddItemForm = () => {
     kit_id: 1,
     unit_id: "",
     cat_id: "",
-    user_id: "" });
+    user_id: 1 });
 
 
 function changeHandler(event){
@@ -20,6 +20,7 @@ function changeHandler(event){
 
 function submitHandler(e){
     e.preventDefault();
+    console.log(newIngredient)
   console.log("new ingredient", {...newIngredient, quantity: Number(newIngredient.quantity),
     price: Number(newIngredient.price), alert_when: Number(newIngredient.alert_when),
     unit_id: Number(newIngredient.unit_id), cat_id: Number(newIngredient.cat_id), user_id: Number(newIngredient.user_id),
@@ -61,9 +62,9 @@ function submitHandler(e){
           </label>
             <label>
               Unit:
-          <select name={newIngredient.unit_id}>
-              <option>Select Option</option>
-              <option value="1">Pounds</option>
+          <select name="unit_id" onChange={changeHandler}>
+              <option >Select Option</option>
+              <option value="1" >Pounds</option>
               <option value="2">Ounces</option>
               <option value="3">Packages</option>
               <option value="4">Cans</option>
@@ -98,7 +99,7 @@ function submitHandler(e){
               </label>
                 <label>
                   Category:
-                  <select name={newIngredient.cat_id}>
+                  <select name="cat_id" onChange={changeHandler}>
                       <option>Select Option</option>
                       <option value="1">Produce</option>
                       <option value="2">Dairy</option>
