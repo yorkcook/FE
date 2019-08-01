@@ -5,27 +5,28 @@ import SignupForm from "./SignUpForm";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 
-const Login = ({ touched, errors}) => {
+
+const Login = ({ touched, errors }) => {
   return (
     <div className="box">
-    <h1 className="registration-title">Registration Form</h1>
-    <Form>
-      <div>
-        <label>Name</label>
-        <div className='test'>
-        <Field type="text" name="username" placeholder="Enter Name" />
-        <p>{touched.name && errors.name}</p>
+      <h1 className="registration-title">Registration Form</h1>
+      <Form>
+        <div>
+          <label>Name</label>
+          <div className="test">
+            <Field type="text" name="username" placeholder="Enter Name" />
+            <p>{touched.name && errors.name}</p>
+          </div>
         </div>
-      </div>
-      <div>
-        <label>Password</label>
-        <div className='test'>
-        <Field type="text" name="password" placeholder="Enter Password" />
-        <p>{touched.password && errors.password}</p>
+        <div>
+          <label>Password</label>
+          <div className="test">
+            <Field type="text" name="password" placeholder="Enter Password" />
+            <p>{touched.password && errors.password}</p>
+          </div>
         </div>
-      </div>
-      <button type="submit">Submit</button>
-    </Form>
+        <button type="submit">Submit</button>
+      </Form>
     </div>
   );
 };
@@ -64,7 +65,6 @@ export default withFormik({
 })(Login);
 
 
-
 // import React, {useState, useEffect} from 'react'
 // import axios from 'axios'
 // import SignupForm from './SignUpForm';
@@ -93,3 +93,4 @@ export default withFormik({
 // }
 
 // export default Login
+
