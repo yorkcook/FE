@@ -5,7 +5,6 @@ import axios from 'axios';
 
 const IngredientsList = (props) => {
 const [ingredient, setIngredient] = useState([]);
-
 // {
 //   "item_name": "yellow popcorn",
 //   "quantity": 10,
@@ -19,25 +18,51 @@ const [ingredient, setIngredient] = useState([]);
 useEffect(() => {
   axios
     .get("https://server-soup.herokuapp.com/api/inventory")
-    .then(res => {console.log(res.data)
+    .then(res => {
     setIngredient(res.data)})
     .catch(err => console.log(err))
 }, [])
 
-function minus(){
-  const id = props.match.params.id;
+function minus(id, event){
+  event.preventDefault()
+  const object = ingredient.filter(item => item.id === id  )
+  const newQuantity = object[0].quantity - 1
+  console.log("new quantity", newQuantity)
+  console.log("id", id)
+  console.log("object", object)
   axios
-    .put(`https://server-soup.herokuapp.com/api/inventory/${id}`)
+    .put(`https://server-soup.herokuapp.com/api/inventory/${id}`, {
+      quantity: newQuantity
+    })
+    .then(res => setIngredient(res))
+    .catch(err => console.log(err))
 }
 
-function plus(){
-
+function plus(id, event){
+  event.preventDefault()
+  const object = ingredient.filter(item => item.id === id  )
+  const newQuantity = object[0].quantity + 1
+  axios
+    .put(`https://server-soup.herokuapp.com/api/inventory/${id}`, {
+      quantity: newQuantity
+    })
+    .then(res => {
+      console.log("response", res)
+      setIngredient(res.data)
+      window.location.reload(false);})
+    .catch(err => console.log(err))
 }
+
+if (!ingredient){
+  return <h1>LOADING</h1>
+} else {
   return (
     <div>
+
       <IngredientsCard card={ingredient} plus={plus} minus={minus}/>
     </div>
   )
+}
 }
 
 export default IngredientsList;
