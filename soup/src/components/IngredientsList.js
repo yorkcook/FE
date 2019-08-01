@@ -6,6 +6,16 @@ import axios from 'axios';
 const IngredientsList = (props) => {
 const [ingredient, setIngredient] = useState([]);
 
+// {
+//   "item_name": "yellow popcorn",
+//   "quantity": 10,
+//   "unit_id": "1",
+//   "price": 1000,
+//   "alert_when": 0,
+//   "cat_id": 3,
+//   "kit_id": 1
+// }
+
 useEffect(() => {
   axios
     .get("https://server-soup.herokuapp.com/api/inventory")
@@ -14,9 +24,18 @@ useEffect(() => {
     .catch(err => console.log(err))
 }, [])
 
+function minus(){
+  const id = props.match.params.id;
+  axios
+    .put(`https://server-soup.herokuapp.com/api/inventory/${id}`)
+}
+
+function plus(){
+
+}
   return (
     <div>
-      <IngredientsCard card={ingredient}/>
+      <IngredientsCard card={ingredient} plus={plus} minus={minus}/>
     </div>
   )
 }
