@@ -8,10 +8,9 @@ const SingleIngredient = (props) => {
   useEffect(() => {
       const id = props.match.params.id;
 
-      axios(`https://server-soup.herokuapp.com/api/inventory/${id}`)
-        .get(res => { console.log(res)
-          setIngredient(res)
-        })
+      axios
+        .get((`https://server-soup.herokuapp.com/api/inventory/${id}`))
+        .then(res => setIngredient(res.data))
         .catch(err => console.log(err))
   }, [props.match.params.id])
 
