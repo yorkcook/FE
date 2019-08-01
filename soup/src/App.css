@@ -32,7 +32,6 @@
   }
 }
 
-
 .card {
   display: flex;
   flex-direction: column;
@@ -49,10 +48,7 @@
   justify-content: center;
 }
 
-
 .name {
-
-
 }
 
 .quantity {
@@ -120,6 +116,7 @@
 .K-title {
   margin: 0 1% 0 0;
   color: black;
+}
 
 button {
   max-width: 150px;
@@ -167,6 +164,4 @@ label {
   border: 3px solid black;
   width: 30%;
   margin-left: 550px;
-
-
 }
