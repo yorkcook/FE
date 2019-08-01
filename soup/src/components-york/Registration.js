@@ -14,30 +14,24 @@ const Registration = ({ touched, errors, values, handleChange }) => {
       <Form>
         <div>
           <label>UserName</label>
-          <div className="test">
-            <Field
-              type="text"
-              name="username"
-              placeholder="Enter your username"
-            />
+          <div className='test'>
+            <Field type="text" name="username" placeholder='Enter your username'/>
             <p>{touched.username && errors.username}</p>
-          </div>
         </div>
+      </div>
         <div>
           <label>Email</label>
+
           <div className="test">
             <Field type="email" name="email" placeholder="Enter your email" />
+
             <p>{touched.email && errors.email}</p>
           </div>
         </div>
         <div>
           <label>Password</label>
-          <div className="test">
-            <Field
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-            />
+          <div className='test'>
+            <Field type="password" name="password" placeholder='Enter your password' />
             <p>{touched.password && errors.password}</p>
           </div>
         </div>
@@ -45,7 +39,7 @@ const Registration = ({ touched, errors, values, handleChange }) => {
           <label>Soup Kitchen</label>
           <div className="test">
             <select name="kit_id" value={values.color} onChange={handleChange}>
-              <option value="" label="Select a color" />
+              <option value="" label="Select a Kitchen" />
               <option value="1">St. Antony's</option>
               <option value="2">GLIDE</option>
               <option value="3">Mother Brown's Kitchen</option>
