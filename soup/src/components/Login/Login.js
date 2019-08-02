@@ -5,11 +5,10 @@ import SignupForm from "./SignUpForm";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 
-
 const Login = ({ touched, errors }) => {
   return (
     <div className="box">
-      <h1 className="registration-title">Registration Form</h1>
+      <h1 className="registration-title">Login Form</h1>
       <Form>
         <div>
           <label>Name</label>
@@ -64,7 +63,6 @@ export default withFormik({
   }
 })(Login);
 
-
 // import React, {useState, useEffect} from 'react'
 // import axios from 'axios'
 // import SignupForm from './SignUpForm';
@@ -73,7 +71,7 @@ export default withFormik({
 //     // const [logins, setLogins] = useState()
 
 //     // //useEffect for future axios call
-//     // useEffect(()=>{ 
+//     // useEffect(()=>{
 //     // //'grabs api data'
 //     // axios.get('apihere')
 //     //  //if data exsists return response data
@@ -93,4 +91,3 @@ export default withFormik({
 // }
 
 // export default Login
-
