@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Registration from "./components-york/Registration";
 import PrivateRoute from "./components-york/PrivateRoute";
 import SingleIngredient from "./components/SingleIngredient.js";
+import PutForm from "./components-york/PutForm";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -26,7 +27,8 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route path="/registration" component={Registration} />
         {/* <Route path="/inventory" component={IngredientsList} /> */}
-        <Route path="/add-item" component={AddItemForm} />
+        <PrivateRoute path="/add-item" component={AddItemForm} />
+        <PrivateRoute path="/update-item" component={PutForm} />
 
         <PrivateRoute exact path="/inventory" component={IngredientsList} />
       </div>

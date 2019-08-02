@@ -42,7 +42,9 @@ const IngredientsList = props => {
 
   function minus() {
     const id = props.match.params.id;
-    axios.put(`https://server-soup.herokuapp.com/api/inventory/${id}`);
+    axiosWithAuth().put(
+      `https://server-soup.herokuapp.com/api/inventory/${id}`
+    );
   }
 
   function plus() {}
