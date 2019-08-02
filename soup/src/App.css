@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Roboto Slab";
 }
 
 .App-logo {
@@ -30,4 +31,206 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 15px;
+  width: 30%;
+  margin: 2%;
+  box-shadow: 5px 10px 8px black;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.name {
+}
+
+.quantity {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.unit {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.price {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.category {
+  display: flex;
+  margin: 0;
+  padding: 5px;
+  background: lightgrey;
+  color: grey;
+}
+
+.kitchen {
+  display: flex;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  background: lightgrey;
+  border: 1px solid transparent;
+  color: grey;
+}
+
+.Q-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.U-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.P-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.C-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.K-title {
+  margin: 0 1% 0 0;
+  color: black;
+}
+
+.countButtons {
+  text-align: center;
+  background: black;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 5px 0 10px 35%;
+  width: 30%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
+  font-weight: bold;
+  color: magenta;
+}
+
+.countButtons:hover {
+  cursor: pointer;
+}
+
+button {
+  max-width: 150px;
+  margin: 20px 0;
+  padding: 12px 20px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: black;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  /* font-family: 'Roboto Slab'; */
+  font-size: 17px;
+  font-weight: bold;
+  color: #a05b77;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 16px;
+  width: 15rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* content: center; */
+  /* margin-left: 110px; */
+  /* display: inline-block; */
+}
+
+label {
+  font-weight: bold;
+  /* display: inline-block; */
+  margin-bottom: 0.5rem;
+  color: #a05b77;
+  text-align: center;
+}
+
+.registration-title {
+  color: #a05b77;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.box {
+  border: 3px solid black;
+  width: 30%;
+  /* margin-left: 550px; */
+  margin: 50px 0 0 0;
+  display: inline-block;
+  background-color: orange;
+}
+
+.test {
+  margin: 0;
+  padding: 1rem 0 0.5rem;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  background-color: rgb(248, 202, 115);
+}
+
+/* .navBox{
+  width: 100px;
+  height: 100px;
+  margin: 0 .3rem 0 .6rem;
+  padding: 0 .3rem 0 .6rem;
+} */
+
+.links {
+  text-decoration: none;
+  /* padding: 0 .3rem 0 .6rem; */
+  padding: 0;
+  margin: 0 1rem 0 0.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  /* border: 1px solid grey; */
+  /* width: 100px;
+  height: 100px; */
+}
+
+.logo {
+  height: 6rem;
+  width: 6rem;
+  margin-right: 5rem;
+}
+
+body {
+  background-color: #30271c;
+
 }
