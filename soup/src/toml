@@ -1,4 +1,4 @@
 [build]
-  base = "FE/"
-  publish="FE/soup/"
+  base = "soup/"
+  publish="soup/build/"
   command = "yarn build"

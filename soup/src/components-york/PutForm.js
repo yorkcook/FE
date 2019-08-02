@@ -93,6 +93,7 @@ const PutForm = props => {
         <input
           type="text"
           name="item_name"
+          placeholder={props.location.state.item.item_name}
           value={ingredient.item_name}
           onChange={changeHandler}
         />
@@ -102,6 +103,7 @@ const PutForm = props => {
         <input
           type="text"
           name="quantity"
+          placeholder={props.location.state.item.quantity}
           value={ingredient.quantity}
           onChange={changeHandler}
         />
@@ -130,6 +132,7 @@ const PutForm = props => {
         <input
           type="text"
           name="price"
+          placeholder={props.location.state.item.price}
           value={ingredient.price}
           onChange={changeHandler}
         />
@@ -139,6 +142,7 @@ const PutForm = props => {
         <input
           type="text"
           name="alert_when"
+          placeholder={props.location.state.item.alert_when}
           value={ingredient.alert_when}
           onChange={changeHandler}
         />
