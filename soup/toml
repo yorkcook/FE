@@ -2,8 +2,4 @@
 [build]
   base = "FE/"
   publish="FE/soup/"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  command = "yarn build"
