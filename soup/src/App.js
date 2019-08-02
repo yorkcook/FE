@@ -30,10 +30,10 @@ function App() {
         <NavBar />
         <Route exact path="/login" component={Login} />
         <Route path="/registration" component={Registration} />
-        <Route path="/inventory" component={IngredientsList} />
+        {/* <Route path="/inventory" component={IngredientsList} /> */}
         <Route path="/add-item" component={AddItemForm} />
 
-        {/* <PrivateRoute exact path="/inventory" component={Inventory} /> */}
+        <PrivateRoute exact path="/inventory" component={IngredientsList} />
       </div>
     </Router>
   );
