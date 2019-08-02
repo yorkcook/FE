@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 import axios from "axios";
 import axiosWithAuth from "./axiosWithAuth";
 const PutForm = props => {
@@ -54,6 +55,11 @@ const PutForm = props => {
         setIngredient(res.data);
       })
       .catch(err => console.log(err));
+  }
+
+  function routeChange() {
+    let path = '/inventory'
+    props.history.push(path)
   }
 
   //   useEffect(() => {
@@ -152,7 +158,9 @@ const PutForm = props => {
           <option value="9">Other</option>
         </select>
       </label>
-      <button type="submit">Submit</button>
+      <button type="submit" >Submit</button>
+      <button onClick={routeChange}>Back</button>
+      
     </form>
   );
 };

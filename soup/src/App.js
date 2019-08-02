@@ -30,8 +30,6 @@ function App() {
         {/* <Route path="/add-item" component={AddItemForm} /> */}
         <PrivateRoute path="/add-item" component={AddItemForm} />
         <PrivateRoute path="/update-item" component={PutForm} />
-
-
         <PrivateRoute exact path="/inventory" component={IngredientsList} />
       </div>
     </Router>
