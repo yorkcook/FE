@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Roboto Slab';
-
+  font-family: "Roboto Slab";
 }
 
 .App-logo {
@@ -119,7 +118,6 @@
   color: black;
 }
 
-
 .countButtons {
   text-align: center;
   background: black;
@@ -137,8 +135,6 @@
   cursor: pointer;
 }
 
-
-
 button {
   max-width: 150px;
   margin: 20px 0;
@@ -150,7 +146,7 @@ button {
   /* font-family: 'Roboto Slab'; */
   font-size: 17px;
   font-weight: bold;
-  color:  #a05b77;
+  color: #a05b77;
   cursor: pointer;
   outline: none;
   -webkit-appearance: none;
@@ -195,13 +191,12 @@ label {
   background-color: orange;
 }
 
-
-.test{
+.test {
   margin: 0;
-  padding: 1rem 0 .5rem;
+  padding: 1rem 0 0.5rem;
 }
 
-.header{
+.header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -217,11 +212,11 @@ label {
   padding: 0 .3rem 0 .6rem;
 } */
 
-.links{
+.links {
   text-decoration: none;
   /* padding: 0 .3rem 0 .6rem; */
   padding: 0;
-  margin: 0 1rem 0 .5rem;
+  margin: 0 1rem 0 0.5rem;
   font-size: 1.4rem;
   font-weight: bold;
   /* border: 1px solid grey; */
@@ -229,15 +224,13 @@ label {
   height: 100px; */
 }
 
-.logo{
+.logo {
   height: 6rem;
   width: 6rem;
   margin-right: 5rem;
 }
 
-body{
+body {
   background-color: #30271c;
 
-  margin-left: 550px;
 }
-

@@ -14,11 +14,15 @@ const Registration = ({ touched, errors, values, handleChange }) => {
       <Form>
         <div>
           <label>UserName</label>
-          <div className='test'>
-            <Field type="text" name="username" placeholder='Enter your username'/>
+          <div className="test">
+            <Field
+              type="text"
+              name="username"
+              placeholder="Enter your username"
+            />
             <p>{touched.username && errors.username}</p>
+          </div>
         </div>
-      </div>
         <div>
           <label>Email</label>
 
@@ -30,8 +34,12 @@ const Registration = ({ touched, errors, values, handleChange }) => {
         </div>
         <div>
           <label>Password</label>
-          <div className='test'>
-            <Field type="password" name="password" placeholder='Enter your password' />
+          <div className="test">
+            <Field
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+            />
             <p>{touched.password && errors.password}</p>
           </div>
         </div>
@@ -83,7 +91,7 @@ export default withFormik({
       .then(res => {
         console.log("in handleSubmit", res);
         localStorage.setItem("token", res.data.token);
-        props.history.push("/ingredients");
+        props.history.push("/inventory");
       })
       .catch(e => {
         console.log("Registration Failed!", e);
