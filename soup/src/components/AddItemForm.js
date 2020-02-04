@@ -35,7 +35,7 @@ const AddItemForm = () => {
   }
   useEffect(() => {
     axiosWithAuth()
-      .post("https://server-soup.herokuapp.com/api/inventory", {
+      .post("https://we-serve-soup.herokuapp.com/api/inventory", {
         ...newIngredient,
         quantity: Number(newIngredient.quantity),
         price: Number(newIngredient.price),
@@ -117,7 +117,7 @@ const AddItemForm = () => {
           </div>
         </label>
       </div>
-      <label>
+      {/* <label>
         Alert when:
         <div>
           <input
@@ -127,7 +127,7 @@ const AddItemForm = () => {
             onChange={changeHandler}
           />
         </div>
-      </label>
+      </label> */}
       <label>
         Category:
         <div>
