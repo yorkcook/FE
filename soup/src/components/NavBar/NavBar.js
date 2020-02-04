@@ -14,6 +14,12 @@ export default function NavBar() {
         <Link to="/registration" className="links">
           Register
         </Link>
+        <Link to="/add-item" className="links">
+          Add Item
+        </Link>
+        <Link to="/inventory" className="links">
+          Inventory
+        </Link>
       </div>
     </header>
   );
