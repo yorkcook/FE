@@ -19,7 +19,11 @@ const Login = ({ touched, errors }) => {
         <div>
           <label>Password</label>
           <div className="test">
-            <Field type="text" name="password" placeholder="Enter Password" />
+            <Field
+              type="password"
+              name="password"
+              placeholder="Enter Password"
+            />
             <p>{touched.password && errors.password}</p>
           </div>
         </div>
