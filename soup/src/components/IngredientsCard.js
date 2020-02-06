@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 import axiosWithAuth from "../components-york/axiosWithAuth";
 import { Link } from "react-router-dom";
 
-import { data } from "../dummyData.js";
+// import { data } from "../dummyData.js";
 
 const IngredientsCard = props => {
   const [ingredient, setIngredient] = useState([]);
 
   useEffect(() => {
     axiosWithAuth()
-      .get("https://server-soup.herokuapp.com/api/inventory")
+      .get("https://we-serve-soup.herokuapp.com/api/inventory")
       .then(res => {
         setIngredient(res.data);
       })
@@ -19,12 +19,12 @@ const IngredientsCard = props => {
       });
   }, []);
 
-  console.log("data", data);
+  // console.log("data", data);
 
   return (
     <div>
       <div className="page">
-        {data.map(item => {
+        {props.card.map(item => {
           return (
             <div className="card" key={item.id}>
               <h3 className="headline">{item.name}</h3>

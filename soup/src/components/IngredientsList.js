@@ -9,7 +9,7 @@ const IngredientsList = props => {
 
   useEffect(() => {
     axiosWithAuth()
-      .get("https://server-soup.herokuapp.com/api/inventory")
+      .get("https://we-serve-soup.herokuapp.com/api/inventory")
       .then(res => {
         setIngredient(res.data);
       })

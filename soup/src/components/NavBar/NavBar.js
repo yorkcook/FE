@@ -1,8 +1,12 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../img/logo.png";
 
 export default function NavBar() {
+  const logOut = () => {
+    localStorage.removeItem("token");
+  };
+
   return (
     <header className="header">
       <img src={Logo} alt="Img Logo" className="logo" />
@@ -19,6 +23,9 @@ export default function NavBar() {
         </Link>
         <Link to="/inventory" className="links">
           Inventory
+        </Link>
+        <Link to="/" className="links">
+          <button onClick={logOut}>Log Out</button>
         </Link>
       </div>
     </header>
