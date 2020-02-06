@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import axiosWithAuth from "../components-york/axiosWithAuth.js";
 
-const AddItemForm = () => {
+const AddItemForm = props => {
   const [newIngredient, setNewIngredient] = useState({
     item_name: "",
     quantity: "",
@@ -52,6 +52,11 @@ const AddItemForm = () => {
       })
       .catch(err => console.log(err));
   }, []);
+
+  function routeChange() {
+    let path = "/inventory";
+    props.history.push(path);
+  }
 
   return (
     <form className="box" onSubmit={submitHandler}>
@@ -146,6 +151,7 @@ const AddItemForm = () => {
         </div>
       </label>
       <button type="submit">Submit</button>
+      <button onClick={routeChange}>Back</button>
     </form>
   );
 };

@@ -119,6 +119,10 @@
   color: black;
 }
 
+.navTitle {
+  margin-left: 300px;
+}
+
 .countButtons {
   text-align: center;
   background: black;
