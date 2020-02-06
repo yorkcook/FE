@@ -4,7 +4,7 @@ import IngredientsList from "./components/IngredientsList.js";
 import { Route } from "react-router-dom";
 import AddItemForm from "./components/AddItemForm.js";
 
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar";
 
 import Registration from "./components-york/Registration";
 import PrivateRoute from "./components-york/PrivateRoute";
@@ -16,7 +16,7 @@ import "./App.css";
 
 import "./Registration.css";
 
-import Login from "./components/Login/Login";
+import Login from "./components/Login";
 
 function App() {
   return (
