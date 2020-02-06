@@ -84,7 +84,7 @@ export default withFormik({
     // kit_id: Yup.string().required("Kitchen identity is required")
   }),
   handleSubmit(values, { props }) {
-    const url = "https://server-soup.herokuapp.com/api/auth/register";
+    const url = "https://we-serve-soup.herokuapp.com/api/auth/register";
     console.log("in handle submit", values);
     axios
       .post(url, values)

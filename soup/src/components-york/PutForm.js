@@ -35,24 +35,22 @@ const PutForm = props => {
       kit_id: Number(ingredient.kit_id)
     });
     axiosWithAuth()
-      .put(
-        `https://server-soup.herokuapp.com/api/inventory/${food}
-        `,
-        {
-          ...ingredient,
-          quantity: Number(ingredient.quantity),
-          price: Number(ingredient.price),
-          alert_when: Number(ingredient.alert_when),
-          unit_id: Number(ingredient.unit_id),
-          cat_id: Number(ingredient.cat_id),
-          user_id: Number(ingredient.user_id),
-          kit_id: Number(ingredient.kit_id)
-        }
-      )
+      .put(`https://we-serve-soup.herokuapp.com/api/inventory/${food.id}`, {
+        ...ingredient,
+        quantity: Number(ingredient.quantity),
+        price: Number(ingredient.price),
+        alert_when: Number(ingredient.alert_when),
+        unit_id: Number(ingredient.unit_id),
+        cat_id: Number(ingredient.cat_id),
+        user_id: Number(ingredient.user_id),
+        kit_id: Number(ingredient.kit_id)
+      })
 
       .then(res => {
         console.log("response", res.data);
         setIngredient(res.data);
+        let path = "/inventory";
+        props.history.push(path);
       })
       .catch(err => console.log(err));
   }
@@ -65,7 +63,7 @@ const PutForm = props => {
   //   useEffect(() => {
   // axiosWithAuth()
   //   .put(
-  //     `https://server-soup.herokuapp.com/api/inventory/${food}
+  //     `https://we-serve-soup.herokuapp.com/api/inventory/${food}
   //     `,
   //     {
   //       ...ingredient,
@@ -124,6 +122,7 @@ const PutForm = props => {
               name="unit_id"
               onChange={changeHandler}
               placeholder={food.unit}
+              value={ingredient.unit_id}
             >
               <option>Select Option</option>
               <option value="1">Pounds</option>
@@ -175,6 +174,7 @@ const PutForm = props => {
             name="cat_id"
             onChange={changeHandler}
             placeholder={food.category}
+            value={ingredient.cat_id}
           >
             <option>Select Option</option>
             <option value="1">Produce</option>

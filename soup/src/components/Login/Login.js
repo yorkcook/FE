@@ -51,7 +51,7 @@ export default withFormik({
       .required("Password is required")
   }),
   handleSubmit(values, { props }) {
-    const url = "https://server-soup.herokuapp.com/api/auth/login";
+    const url = "https://we-serve-soup.herokuapp.com/api/auth/login";
     console.log("in handle submit", values);
     axios
       .post(url, values)
