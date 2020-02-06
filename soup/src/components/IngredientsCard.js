@@ -31,9 +31,10 @@ const IngredientsCard = props => {
       </Link>
       <div className="page">
         {props.card.map(item => {
+          console.log("props", props);
           return (
             <div className="card" key={item.id}>
-              <h3 className="headline">{item.name}</h3>
+              <h3 className="headline">{item.item_name}</h3>
               <h4 className="quantity">
                 <p className="Q-title">
                   <strong>Quantity: </strong>
@@ -56,19 +57,19 @@ const IngredientsCard = props => {
                 <p className="C-title">
                   <strong>Category: </strong>
                 </p>
-                {item.category}
+                {item.cat_name}
               </h4>
               <h4 className="kitchen">
                 <p className="K-title">
                   <strong>Kitchen: </strong>
                 </p>
-                {item.kitchen}
+                {item.kit_name}
               </h4>
               <div>
                 <Link
                   to={{ pathname: `/update-item/${item.id}`, state: { item } }}
                 >
-                  Edit
+                  <button>Edit</button>
                 </Link>
               </div>
             </div>
