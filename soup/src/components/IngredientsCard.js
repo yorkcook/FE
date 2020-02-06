@@ -23,6 +23,12 @@ const IngredientsCard = props => {
 
   return (
     <div>
+      <Link to="/add-item" className="links">
+        <button>Add Item</button>
+      </Link>
+      <Link to="/inventory" className="links">
+        <button>Inventory</button>
+      </Link>
       <div className="page">
         {props.card.map(item => {
           return (
