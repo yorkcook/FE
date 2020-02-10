@@ -71,6 +71,7 @@ const IngredientsCard = props => {
                 >
                   <button>Edit</button>
                 </Link>
+                <button>Delete</button>
               </div>
             </div>
           );
