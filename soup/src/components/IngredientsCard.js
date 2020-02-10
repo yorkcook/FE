@@ -71,7 +71,11 @@ const IngredientsCard = props => {
                 >
                   <button>Edit</button>
                 </Link>
-                <button>Delete</button>
+                <Link
+                  to={{ pathname: `/update-item/${item.id}`, state: { item } }}
+                >
+                  <button>Delete</button>
+                </Link>
               </div>
             </div>
           );

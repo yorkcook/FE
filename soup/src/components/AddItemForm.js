@@ -19,10 +19,19 @@ const AddItemForm = props => {
       [event.target.name]: event.target.value
     });
   }
-  function submitHandler(e) {
+  const submitHandler = e => {
     e.preventDefault();
-    console.log(newIngredient);
-    console.log("new ingredient", {
+    // console.log("new ingredient", {
+    //   ...newIngredient,
+    //   quantity: Number(newIngredient.quantity),
+    //   price: Number(newIngredient.price),
+    //   alert_when: Number(newIngredient.alert_when),
+    //   unit_id: Number(newIngredient.unit_id),
+    //   cat_id: Number(newIngredient.cat_id),
+    //   user_id: Number(newIngredient.user_id),
+    //   kit_id: Number(newIngredient.kit_id)
+    // });
+    setNewIngredient({
       ...newIngredient,
       quantity: Number(newIngredient.quantity),
       price: Number(newIngredient.price),
@@ -32,7 +41,8 @@ const AddItemForm = props => {
       user_id: Number(newIngredient.user_id),
       kit_id: Number(newIngredient.kit_id)
     });
-  }
+    props.history.push("/inventory");
+  };
   useEffect(() => {
     axiosWithAuth()
       .post("https://we-serve-soup.herokuapp.com/api/inventory", {
@@ -51,7 +61,7 @@ const AddItemForm = props => {
         setNewIngredient(res.data);
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [newIngredient]);
 
   function routeChange() {
     let path = "/inventory";
@@ -150,7 +160,9 @@ const AddItemForm = props => {
           </select>
         </div>
       </label>
-      <button type="submit">Submit</button>
+      <button type="submit" onClick={submitHandler}>
+        Submit
+      </button>
       <button onClick={routeChange}>Back</button>
     </form>
   );
