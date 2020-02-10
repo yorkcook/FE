@@ -6,9 +6,10 @@ import AddItemForm from "./components/AddItemForm.js";
 
 import NavBar from "./components/NavBar";
 
-import Registration from "./components-york/Registration";
-import PrivateRoute from "./components-york/PrivateRoute";
-import PutForm from "./components-york/PutForm";
+import Registration from "./components/Registration";
+import PrivateRoute from "./components/PrivateRoute";
+import PutForm from "./components/PutForm";
+import Home from "./components/Home";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
+        <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route path="/registration" component={Registration} />
         {/* <Route path="/inventory" component={IngredientsList} /> */}
@@ -30,8 +32,6 @@ function App() {
         <PrivateRoute path="/add-item" component={AddItemForm} />
         <PrivateRoute path="/update-item" component={PutForm} />
         <PrivateRoute exact path="/inventory" component={IngredientsList} />
-        <h1>Welcome to We Serve Soup!</h1>
-        <h2>Please Log in or Register to continue!</h2>
       </div>
     </Router>
   );

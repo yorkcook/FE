@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { data } from "../dummyData.js";
 import IngredientsCard from "./IngredientsCard.js";
 
-import axiosWithAuth from "../components-york/axiosWithAuth";
+import axiosWithAuth from "../components/axiosWithAuth";
 
 const IngredientsList = props => {
   const [ingredient, setIngredient] = useState([]);

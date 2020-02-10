@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import axiosWithAuth from "../components-york/axiosWithAuth.js";
+import axiosWithAuth from "../components/axiosWithAuth.js";
 
 const AddItemForm = props => {
   const [newIngredient, setNewIngredient] = useState({

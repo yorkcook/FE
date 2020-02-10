@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import axiosWithAuth from "../components-york/axiosWithAuth";
+import axiosWithAuth from "../components/axiosWithAuth";
 import { Link } from "react-router-dom";
 
 // import { data } from "../dummyData.js";
