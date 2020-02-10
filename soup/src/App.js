@@ -30,6 +30,8 @@ function App() {
         <PrivateRoute path="/add-item" component={AddItemForm} />
         <PrivateRoute path="/update-item" component={PutForm} />
         <PrivateRoute exact path="/inventory" component={IngredientsList} />
+        <h1>Welcome to We Serve Soup!</h1>
+        <h2>Please Log in or Register to continue!</h2>
       </div>
     </Router>
   );
