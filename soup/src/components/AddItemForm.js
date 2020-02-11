@@ -55,7 +55,6 @@ const AddItemForm = props => {
         user_id: Number(newIngredient.user_id),
         kit_id: Number(newIngredient.kit_id)
       })
-      // .post("https://05386425-fdd8-4080-a90a-ba001245303b.mock.pstmn.io/api/inventory", newIngredient)
       .then(res => {
         console.log("response", res.data);
         setNewIngredient(res.data);

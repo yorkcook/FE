@@ -11,7 +11,9 @@ export default function NavBar(props) {
   return (
     <header className="header">
       {/* <img src={Logo} alt="Img Logo" className="logo" /> */}
-      <h1 className="navTitle">We Serve Soup</h1>
+      <h1 className="navTitle">
+        <a href="/">We Serve Soup</a>
+      </h1>
       <div className="navBox">
         {localStorage.getItem("token") ? (
           <>

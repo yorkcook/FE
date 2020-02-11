@@ -60,30 +60,6 @@ const PutForm = props => {
     props.history.push(path);
   }
 
-  //   useEffect(() => {
-  // axiosWithAuth()
-  //   .put(
-  //     `https://we-serve-soup.herokuapp.com/api/inventory/${food}
-  //     `,
-  //     {
-  //       ...ingredient,
-  //       quantity: Number(ingredient.quantity),
-  //       price: Number(ingredient.price),
-  //       alert_when: Number(ingredient.alert_when),
-  //       unit_id: Number(ingredient.unit_id),
-  //       cat_id: Number(ingredient.cat_id),
-  //       user_id: Number(ingredient.user_id),
-  //       kit_id: Number(ingredient.kit_id)
-  //     }
-  //   )
-
-  //   .then(res => {
-  //     console.log("response", res.data);
-  //     setIngredient(res.data);
-  //   })
-  //   .catch(err => console.log(err));
-  //   }, []);
-
   return (
     <form className="box" onSubmit={submitHandler}>
       <div>
@@ -100,7 +76,7 @@ const PutForm = props => {
           </div>
         </label>
       </div>
-      <div>
+      {/* <div>
         <label>
           Quantity:
           <div>
@@ -155,7 +131,7 @@ const PutForm = props => {
             />
           </div>
         </label>
-      </div>
+      </div> */}
       {/* <label>
         Alert when:
         <div>
