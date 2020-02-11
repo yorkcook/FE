@@ -10,6 +10,7 @@ import Registration from "./components/Registration";
 import PrivateRoute from "./components/PrivateRoute";
 import PutForm from "./components/PutForm";
 import Home from "./components/Home";
+import Delete from "./components/Delete";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -23,7 +24,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <Route path="/" component={NavBar} />
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route path="/registration" component={Registration} />
@@ -31,6 +32,8 @@ function App() {
         {/* <Route path="/add-item" component={AddItemForm} /> */}
         <PrivateRoute path="/add-item" component={AddItemForm} />
         <PrivateRoute path="/update-item" component={PutForm} />
+        <PrivateRoute path="/delete" component={Delete} />
+
         <PrivateRoute exact path="/inventory" component={IngredientsList} />
       </div>
     </Router>

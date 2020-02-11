@@ -26,9 +26,6 @@ const IngredientsCard = props => {
       <Link to="/add-item" className="links">
         <button>Add Item</button>
       </Link>
-      <Link to="/inventory" className="links">
-        <button>Inventory</button>
-      </Link>
       <div className="page">
         {props.card.map(item => {
           console.log("props", props);
@@ -71,9 +68,7 @@ const IngredientsCard = props => {
                 >
                   <button>Edit</button>
                 </Link>
-                <Link
-                  to={{ pathname: `/update-item/${item.id}`, state: { item } }}
-                >
+                <Link to={{ pathname: `/delete/${item.id}`, state: { item } }}>
                   <button>Delete</button>
                 </Link>
               </div>

@@ -35,7 +35,7 @@ const PutForm = props => {
       kit_id: Number(ingredient.kit_id)
     });
     axiosWithAuth()
-      .put(`https://we-serve-soup.herokuapp.com/api/inventory/${food.id}`, {
+      .delete(`https://we-serve-soup.herokuapp.com/api/inventory/${food.id}`, {
         ...ingredient,
         quantity: Number(ingredient.quantity),
         price: Number(ingredient.price),
@@ -189,7 +189,7 @@ const PutForm = props => {
           </select>
         </div>
       </label>
-      <button type="submit">Submit</button>
+      <button type="submit">Delete</button>
       <button onClick={routeChange}>Back</button>
     </form>
   );
