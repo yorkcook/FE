@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <h1 style={{ color: "white" }}>Welcome!</h1>
-      <h2>
+      <h2 style={{ color: "white" }}>
         Please{" "}
         <Link to="/login" className="links">
           <button>Log In</button>

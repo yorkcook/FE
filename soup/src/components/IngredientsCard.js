@@ -23,9 +23,6 @@ const IngredientsCard = props => {
 
   return (
     <div>
-      <Link to="/add-item" className="links">
-        <button>Add Item</button>
-      </Link>
       <div className="page">
         {props.card.map(item => {
           console.log("props", props);
